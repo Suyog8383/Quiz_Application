@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html vxmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/css/study1.css}"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/index.css}">
+         <link rel="stylesheet" href="" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css}"/>
+         <link rel="stylesheet" href="" th:href="@{ https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js}"/>
+          <link rel="stylesheet" href="" th:href="@{ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js}"/>
+<style>
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color:yellow;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#no
+{
+  margin-left: 20px;
+}
+</style>
+
+
+<body th:style="'background:url(/image/examBackground.PNG)'"  background-size: cover;></body>
+</head>
+<body>
+<!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="/">Quiz App</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="/">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/studyboard">Back</a>
+	        </li>
+	       </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!-- Navbar End -->
+	<div class="container-fluid">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Q. Who invented Java Programming?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-xs-3 5"></div>
+					<div class="quiz" id="quiz" data-toggle="buttons">
+						<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="1"> Guido van Rossum</label> <label
+							class="element-animation2 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="2">James Gosling</label> <label
+							class="element-animation3 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="3"> Dennis Ritchie</label> <label
+							class="element-animation4 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="4"> Bjarne Stroustrup </label>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>James Gosling</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q.  Which statement is true about Java?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1">  Java is a sequence-dependent programming language</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2"> Java is a code dependent programming language</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">Java is a platform-dependent programming language</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4">  Java is a platform-independent programming language </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p> Java is a platform-independent programming language</p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which component is used to compile, debug and execute the java programs?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1">  JRE</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">JIT</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">JDK</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> JVM </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>JDK</p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container-fluid">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Q. Which one of the following is not a Java feature</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-xs-3 5"></div>
+					<div class="quiz" id="quiz" data-toggle="buttons">
+						<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="1"> Object-oriented</label> <label
+							class="element-animation2 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="2">Use of pointers</label> <label
+							class="element-animation3 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="3">Portable</label> <label
+							class="element-animation4 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="4"> Dynamic and Extensible</label>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Use of pointers</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q.  Which of these cannot be used for a variable name in Java?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1">  identifier & keyword</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2"> identifier</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">keyword</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> none of the mentioned </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>keyword</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. What is the extension of java code files?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1">.js</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">.text</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">.class</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> .java </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>.java</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which environment variable is used to set the java path?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> MAVEN_Path</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2"> JavaPATH</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">JAVA</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> JAVA_HOME </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>JAVA_HOME</p>
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q.  Which of the following is not an OOPS concept in Java?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> Polymorphism</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">Inheritance</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3">Compilation</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> Encapsulation </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p> Compilation</p>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q.  Which of the following is a type of polymorphism in Java Programming?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> Multiple polymorphism</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2"> Compile time polymorphism</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3"> Multilevel polymorphism</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4">Execution time polymorphism </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p> Compile time polymorphism</p>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q. What is Truncation in Java?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> Floating-point value assigned to a Floating type</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2"> Floating-point value assigned to an integer type</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3">) Integer value assigned to floating type</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4">Integer value assigned to floating type </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Floating-point value assigned to an integer type</p>
+					</div>
+				</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q.  Which of the following is a superclass of every class in Java?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1"> ArrayList</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">Abstract class</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">Object class</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> String </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Object class</p>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. Which of the below is not a Java Profiler?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1"> JProfiler</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">Eclipse Profiler</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">JVM</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> JConsole </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>JVM</p>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. Which of these packages contains the exception Stack Overflow in Java?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1"> java.io</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">java.system</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">java.lang</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4">  java.util </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>java.lang</p>
+					</div>
+				</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Q. . Which of these statements is incorrect about Thread?</h3>
+								</div>
+								<div class="modal-body">
+									<div class="col-xs-3 5"></div>
+									<div class="quiz" id="quiz" data-toggle="buttons">
+										<label
+											class="element-animation1 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="1"> start() method is used to begin execution of the thread</label> <label
+											class="element-animation2 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="2">run() method is used to begin execution of a thread before start() method in special cases
+</label> <label
+											class="element-animation3 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="3">Which of these keywords are used for the block to be examined for exceptions?</label> <label
+											class="element-animation4 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="4"> A thread can be formed by a class that extends Thread class</label>
+									</div>
+								</div>
+								<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p> run() method is used to begin execution of a thread before start() method in special cases</p>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Q. Which of these keywords are used for the block to be examined for exceptions?</h3>
+								</div>
+								<div class="modal-body">
+									<div class="col-xs-3 5"></div>
+									<div class="quiz" id="quiz" data-toggle="buttons">
+										<label
+											class="element-animation1 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="1"> check</label> <label
+											class="element-animation2 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="2"> throw</label> <label
+											class="element-animation3 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="3">catch</label> <label
+											class="element-animation4 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="4">  try </label>
+									</div>
+								</div>
+								<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>try</p>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+ 
+</body>
+</html>

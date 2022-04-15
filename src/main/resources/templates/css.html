@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html vxmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="" th:href="@{/css/study1.css}" />
+<link rel="stylesheet" href="" th:href="@{/css/study1.css}"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href=""
+	th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css}" />
+<link rel="stylesheet" href=""
+	th:href="@{ https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js}" />
+<link rel="stylesheet" href=""
+	th:href="@{ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js}" />
+
+<style>
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color:yellow;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#no
+{
+  margin-left: 20px;
+}
+</style>
+
+
+<body th:style="'background:url(/image/examBackground.PNG)'"  background-size: cover;></body>
+</head>
+<body>
+<!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="/">Quiz App</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="/">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/studyboard">Back</a>
+	        </li>
+	       </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!-- Navbar End -->
+	<div class="container-fluid">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Q. What does CSS stands for?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-xs-3 5"></div>
+					<div class="quiz" id="quiz" data-toggle="buttons">
+						<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="1"> Computer Style
+							Sheets</label> <label
+							class="element-animation2 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="2">Cascading Style
+							Sheets</label> <label
+							class="element-animation3 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="3">Creative Style
+							Sheets</label> <label
+							class="element-animation4 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="4"> Colorful Style
+							Sheets </label>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Cascading Style
+							Sheets</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which of the following tag is used to embed css in html page?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> css </label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2"> !DOCTYPE html</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3"> script</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> style </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>style</p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q.  Which of the following CSS selectors are used to specify a group of elements?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1">tag</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">id</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">class</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4">  both class and tag </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>class</p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container-fluid">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Q.Which of the following has introduced text, list, box, margin, border, color, and background properties?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-xs-3 5"></div>
+					<div class="quiz" id="quiz" data-toggle="buttons">
+						<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="1">HTML</label> <label
+							class="element-animation2 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="2">PHP</label> <label
+							class="element-animation3 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="3">CSS</label> <label
+							class="element-animation4 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="4"> Ajax </label>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>CSS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which of the following function defines a linear gradient as a CSS image?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> gradient()</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">linear-gradient()</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">grayscale()</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4">  image() </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p> linear-gradient()</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which of the following CSS property can be used to set the image as a border instead of the border style?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> background-image-source</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">background-image</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">border-image-source</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> border-image </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>border-image-source</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which of the following CSS property defines the different properties of all four sides of an element’s border in a single declaration?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> border-collapse</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2"> border-width</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">padding</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> border </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>border-width.</p>
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q. Which of the following CSS property sets the font size of text?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1">  font-size</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">text-size</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3">size</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> text </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>font-size</p>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q. Which of the following is not the property of the CSS box model?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> margin</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">color</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3">width</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> Colorful Style
+									Sheets </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>color</p>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q.  Which of the following CSS property specifies the look and design of an outline?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1">  outline-style</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">outline-format</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3">outline-font</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> none of the mentioned</label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>outline-format</p>
+					</div>
+				</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. Which of the following CSS property sets the shadow for a box element?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1"> a) set-shadow</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">b) box-shadow</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3"> shadow</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> canvas-shadow </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>box-shadow</p>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. Which of the following CSS property is used to set the color of the text?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1">  text-decoration</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">pallet</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">colour</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> color </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>color</p>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. Which of the following CSS Property controls how an element is positioned?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1">  static</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2"> position</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">fix</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> set </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>position</p>
+					</div>
+				</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Q. Which of the following is an appropriate value for the overflow element</h3>
+								</div>
+								<div class="modal-body">
+									<div class="col-xs-3 5"></div>
+									<div class="quiz" id="quiz" data-toggle="buttons">
+										<label
+											class="element-animation1 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="1"> scroll</label> <label
+											class="element-animation2 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="2"> hidden</label> <label
+											class="element-animation3 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="3">auto</label> <label
+											class="element-animation4 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="4"> all of the mentioned </label>
+									</div>
+								</div>
+								<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>all of the mentioned</p>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Q. Which of the following CSS property is used to specify table borders in CSS?</h3>
+								</div>
+								<div class="modal-body">
+									<div class="col-xs-3 5"></div>
+									<div class="quiz" id="quiz" data-toggle="buttons">
+										<label
+											class="element-animation1 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="1">  table:border</label> <label
+											class="element-animation2 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="2"> table</label> <label
+											class="element-animation3 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="3">border</label> <label
+											class="element-animation4 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="4"> none </label>
+									</div>
+								</div>
+								<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>border</p>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+</body>
+</html>

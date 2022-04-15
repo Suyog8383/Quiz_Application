@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html vxmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/css/studyboard.css}" />
+
+
+
+
+
+<link rel="stylesheet" href=""
+	th:href="@{ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css}" />
+
+<style>
+
+
+
+.logo
+{
+  font-size:30px;
+	font-weight:bold;
+	letter-spacing:1.5px;
+	  padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+   
+   margin-left: 20PX;
+}
+
+.top
+{
+  background-color: white;
+  	/*margin:0;
+	padding:0;
+	box-sizing:border-box;*/
+	list-style:none;
+	text-decoration:none;
+	font-family:'josefin Sans',sans-serif;
+	
+}
+
+.li1
+{
+   color:#fff;
+   display:inline-block;
+    color:#fff;
+  	text-decoration:none;
+	font-size:18px;
+	text-transform:uppercase;
+	padding:0px 32px;
+	margin-bottom: 10px;
+	
+   padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+   
+   background-color: orange;
+   
+}
+
+.li1:hover
+{
+
+ background-color: yellow;
+
+
+  
+}
+
+
+
+.ul1
+{
+float: right;
+text-transform:uppercase;
+}
+
+
+
+
+
+#animated_div
+{
+
+
+ width: 100px;
+    height: 39px;
+    background: #92B901;
+    color: #ffffff;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    animation: animated_div 5s 1;
+    -moz-animation: animated_div 5s 1;
+    -webkit-animation: animated_div 5s 1;
+    -o-animation: animated_div 5s 1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+}
+
+i
+{
+   padding-right: 8px;
+}
+
+#suraj
+{
+ text-transform: capitalize;
+}
+
+
+</style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+
+	   <div class="top">
+	  
+		<nav>
+
+			  <div class="logo">
+				<p class="p1" id="animated_div"  >QuizeApp</p>
+			  </div>
+
+	        
+			 <ul class="ul1">
+				<li class="li1"><a id="suraj" href="/" class="a1" >Home</a></li>
+			 </ul>
+	
+
+		</nav>
+		
+		 </div>
+ 
+
+	<div class="wrapper">
+
+		<div class="sidebar">
+
+			<h2>Do Practice</h2>
+
+			<ul>
+
+				<li ><a href="/java"><i class='fas fa-book' style='font-size:15px'></i>java</a></li>
+				<li><a href="/css"><i class='fas fa-book' style='font-size:15px'></i>css</a></li>
+				<li><a href="/html"><i class='fas fa-book' style='font-size:15px'></i>html</a></li>
+				<li><a href="#"><i class='fas fa-book' style='font-size:15px'></i>c</a></li>
+				<li><a href="#"><i class='fas fa-book' style='font-size:15px'></i>javascript</a></li>
+				<li><a href="#"><i class='fas fa-book' style='font-size:15px'></i>.net</a></li>
+			
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="main_content">
+
+         
+         <div  class="note">
+         
+           <p><b>1) You should always take notes while you are sitting through a lecture or doing a reading.
+             You will write on key terms and ideas quickly in their notebooks immediately. 
+           It will help you to revise your lessons and get good marks on your exams.</b></p>
+         
+          <div class="note1">
+          
+            <img  alt="" th:src="@{/image/studyboard.jpg} " width="600px" height="400px"/>
+            <p><b>2) You need to manage distraction,
+               despite the fact that social media and technology are useful tools but when you studying this time they can distract too much. 
+              You should silent or switch your mobiles while studying. So avoid distractions while your studies.</b> </p>
+              <p>
+              <b>3) Study with the group can help to student grow. When you study with a group you present at a specific time, you can learn faster, 
+              learn new study skills, and get the new perspective.
+               The study group environment provides students with an opportunity to engage the discussion of course. 
+              It assists students in deep learning in the more effective way.</b></p>
+              
+              <b><p>4) Proper rest is very important for students, your brain needs to rest in order to absorb new information.
+               Sleep – deprivation is one of the common issues in young college students, 
+               these results in brain fog and making difficulty in right decisions. So sleeping seven and a half hours a day should do, 
+              find your apt sleeping time to get the right amount of rest before striking the books.</p></a></b>
+              
+              <b><p>5) Planning is very important for studies, scheduling your time according to your studies are an imperative.
+               Many students just make a timetable and think they have the make study schedule and they don’t follow.
+                In colleges, you should require a comprehensive approach for your studies. 
+                First, you figure out time that how much time you will need for every subject and what are the alternatives study techniques you have.</p></b>
+          </div>
+         
+         </div>
+
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html  vxmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+   <script src="" th:href="@{assets/js/bootstrap.min.js}"></script>
+   <link  href="" th:href="@{//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap}"   rel="stylesheet" />
+
+    <link rel="stylesheet" href="" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/regular.min.css}"/>
+     <link rel="stylesheet" href="" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css}"/>
+
+ <link rel="stylesheet" href="" th:href="@{/image/}"/>
+  <link rel="stylesheet" href="" th:href="@{/css/style.css}"/>
+  <link rel="stylesheet" href="" th:href="@{/css/style-starter.css}"/>
+  <link rel="stylesheet" href="" th:href="@{/css/Site.css}"/>
+  <link rel="stylesheet" href="" th:href="@{/css/StyleSheet1.css}"/>
+  <link rel="stylesheet" href="" th:href="@{/css/bootstrap-theme.min.css}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<!--  
+     <a  th:href="@{/font/FontAwesome.otf}"/>
+    <a  th:href="@{/font/fontawesome-webfont.eot}"></a>
+    <a th:href="@{/font/fontawesome-webfont.ttf}"></a>
+    <a th:href="@{/font/fontawesome-webfont.woff}"></a>
+    
+    <a th:href="@{/font/fontawesome-webfont.woff2}"></a>
+    <a  th:href="@{/font/glyphicons-halflings-regular.eot}"></a>
+    <a  th:href="@{/font/glyphicons-halflings-regular.ttf}"></a>
+    <a  th:href="@{/font/glyphicons-halflings-regular.woff}"></a>
+     <a  th:href="@{/font/glyphicons-halflings-regular.woff2}"></a>
+   
+  
+       <link rel="stylesheet" href="" th:href="@{/font/FontAwesome.otf}"/>
+         <link rel="stylesheet" href="" th:href="@{/font/fontawesome-webfont.eot}"/>
+       <link rel="stylesheet" href="" th:href="@{/font/fontawesome-webfont.ttf}"/>
+         <link rel="stylesheet" href="" th:href="@{/font/fontawesome-webfont.woff}"/>
+         <link rel="stylesheet" href="" th:href="@{/font/fontawesome-webfont.woff2}"/>
+         <link rel="stylesheet" href="" th:href="@{/font/glyphicons-halflings-regular.eot}"/>
+       <link rel="stylesheet" href="" th:href="@{/font/glyphicons-halflings-regular.ttf}"/>
+         <link rel="stylesheet" href="" th:href="@{/font/glyphicons-halflings-regular.woff}"/>
+          <link rel="stylesheet" href="" th:href="@{/font/glyphicons-halflings-regular.woff2}"/>
+         
+         
+   --> 
+
+  <!-- javascript -->
+  
+  <script th:src="@{/javascript/bootstrap.min.js}"></script>
+   <script th:src="@{/javascript/counter.js}"></script>
+    <script th:src="@{/javascript/jquery.magnific-popup.min.js}"></script>
+     <script th:src="@{/javascript/jquery-3.3.1.min.js}"></script>
+      <script th:src="@{/javascript/owl.carousel.js}"></script>
+       <script th:src="@{/javascript/theme-change.js}"></script>
+       
+  
+
+</head>
+
+<body style="background-color: #98cde6;">
+<section class="w3l-top-header">
+        <div class="container-fluid">
+            <div class="top-content-w3ls d-flex align-items-center justify-content-between">
+                <div class="top-headers">
+                    <ul>
+                        <li>
+                            <a href="#help" class="d-sm-block d-none">Have any question ?</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i><a href="tel:+(91) 9923345812">+(91) 9923345812</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i><a href="#">surajhirugade@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-headers top-headers-2">
+                    <ul>
+                        <li>
+                            <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                        </li>
+                        <li>
+                            <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                        </li>
+                        <li>
+                            <a href="#instagram"><span class="fa fa-instagram"></span></a>
+                        </li>
+                        <li class="mr-0">
+                            <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //top header -->
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" >
+                        <img src="images/logo.png" alt="" class="mr-1" />QuizApp
+                        
+                    </a>
+                  
+                </h1>
+                <!-- if logo is image enable this
+                <a class="navbar-brand" href="#index.html">
+                    <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item active"><a class="nav-link"
+							>Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">About
+								Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Courses</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Contact
+								Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="/loginpage">Admin</a>
+						</li>
+						<!-- search button -->
+						<div class="search-right ml-lg-3">
+							<form action="#search" method="GET"
+								class="search-box position-relative">
+								<div class="input-search">
+									<input type="search" placeholder="Enter Keyword" name="search"
+										required="required" autofocus="" class="search-popup">
+								</div>
+								<button type="submit" class="btn search-btn">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</button>
+							</form>
+						</div>
+						<!-- //search button -->
+					</ul>
+				</div>
+				<!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+    <!-- banner section -->
+    <section class="w3l-main-slider" id="home">
+        <div class="companies20-content">
+            <div class="owl-one owl-carousel owl-theme">
+                <div class="item">
+                    <li>
+                        <div class="slider-info banner-view">
+                            <div class="banner-info">
+                                <div class="container">
+                                    <div class="banner-info-bg">
+                                        <h5>Live As If You Were To Die Tomorrow</h5>
+                                        <a class="btn btn-style mt-sm-5 mt-4" href="#">
+                                            Know More<i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                        <div class="slider-info  banner-view banner-top1">
+                            <div class="banner-info">
+                                <div class="container">
+                                    <div class="banner-info-bg">
+                                        <h5>Studious is the best choice for everyone</h5>
+                                        <a class="btn btn-style mt-sm-5 mt-4" href="#">
+                                            Know More<i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+    <!-- banner bottom section -->
+    <section class="w3l-bottom-grids-6 pb-lg-5 text-center" id="services" >
+        <div class="container">
+            <div class="grids-area-hny main-cont-wthree-fea row" >
+                <div class="col-lg-3 col-md-6 px-lg-2">
+                    <div class="area-box color-1">
+                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <h4><a href="/studyboard" class="title-head">Study</a></h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">
+                    <div class="area-box color-2">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <h4><a href="/practice" class="title-head">Quize Practice</a></h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">
+                    <div class="area-box color-3">
+                        <i class="fa fa-hourglass-half"aria-hidden="true"></i>
+                        <h4><a href="/attainExam" class="title-head">Attain Exam</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner bottom section -->
+    <!-- welcome section -->
+    <section class="w3l-feature-8">
+                <div class="title-heading-w3 text-center mx-auto mb-5 pb-sm-4">
+                    <h3 class="title-main">Welcome to <span>QuizApp</span></h3>
+                </div>
+    </section>
+    
+    <!-- //courses section -->
+    <!-- grids section -->
+    <section class="w3l-homeblock1" style="padding-bottom: 50px;">
+                            <div class="fea-gd-vv row" style="padding-left: 50px;">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center feature-gd ">
+                                        <div class="icon">
+                                            <i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="icon-info">
+                                            <h5>All Type Quize</h5>
+                                            <p> Aviable All Subject.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-md-0 mt-4" style="padding-right: 50px;">
+                                    <div class="d-flex align-items-center feature-gd">
+                                        <div class="icon">
+                                            <i class="fa fa-download" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="icon-info">
+                                            <h5>Online Study</h5>
+                                            <p> Do Study.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-4 pt-md-2">
+                                    <div class="d-flex align-items-center feature-gd ">
+                                        <div class="icon">
+                                            <i class="fa fa-headphones" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="icon-info">
+                                            <h5>Educator Help</h5>
+                                            <p> Have You Want To Help.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-4 pt-md-2" style="padding-right: 50px;">
+                                    <div class="d-flex align-items-center feature-gd">
+                                        <div class="icon">
+                                            <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="icon-info">
+                                            <h5>Online Quize</h5>
+                                            <p> Slove It</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    </section>
+    <!-- footer -->
+    <footer class="w3l-footer-22 position-relative mt-5 pt-5">
+        <div class="footer-sub">
+            <div class="container">
+                <div class="text-txt">
+                <div class="right-side" >
+                        <!-- form section -->
+                        <div class="row align-items-center w3l-forms-9">
+                            <div class="main-midd col-md-6">
+                                <h4 class="title-head mb-lg-2">Subscribe Us to join our Community </h4>
+                                <p>Newsletter</p>
+                            </div>
+                            <div class="main-midd-2 col-md-6 mt-md-0 mt-4">
+                                <form action="#url" method="GET" class="rightside-form">
+                                    <input type="email" class="form-control" name="email"
+                                           placeholder="Enter your email">
+                                    <button class="btn" type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- //form section -->
+                    </div>
+                    <div class="row sub-columns">
+                        <div class="col-lg-2 col-sm-6 sub-two-right">
+                            <h6>Quick links</h6>
+                            <ul>
+                                <li>
+                                    <a href="#"><span class="fa fa-angle-double-right mr-2"></span>Home</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="fa fa-angle-double-right mr-2"></span>About</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-angle-double-right mr-2"></span>Courses
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-angle-double-right mr-2"></span>Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-4">
+                            <h6>Help & Support</h6>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-angle-double-right mr-2"></span>Live
+                                        Chart
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#faq"><span class="fa fa-angle-double-right mr-2"></span>Faq</a>
+                                </li>
+                                <li>
+                                    <a href="#support"><span class="fa fa-angle-double-right mr-2"></span>Support</a>
+                                </li>
+                                <li>
+                                    <a href="#terms">
+                                        <span class="fa fa-angle-double-right mr-2"></span>Terms
+                                        of Services
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 sub-one-left mt-lg-0 mt-sm-5 mt-4">
+                            <h6>Contact </h6>
+                            <div class="column2">
+                                <div class="href1">
+                                    <span class="fa fa-envelope-o" aria-hidden="true"></span><a href="#surajhirugade@gmail.com">surajhirugade@gmail.com</a>
+                                </div>
+                                <div class="href2">
+                                    <span class="fa fa-phone" aria-hidden="true"></span><a href="tel:+91-9923345812">+91-9923345812</a>
+                                </div>
+                                <div>
+                                    <p class="contact-para">
+                                        <span class="fa fa-map-marker"
+                                              aria-hidden="true"></span>Sangli, Ashta, 416301
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 sub-one-left ab-right-cont pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                            <h6>About </h6>
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab.
+                            </p>
+                            <div class="columns-2">
+                                <ul class="social">
+                                    <li>
+                                        <a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright-footer text-center">
+            <div class="container">
+                <div class="columns">
+                    <p>
+                      
+                    </p>
+
+
+                </div>
+        </div>
+    </div>
+    <!-- //copyright -->
+</footer>
+<!-- //footer -->
+<!-- Js scripts -->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fa fa-level-up" aria-hidden="true"></span>
+</button>
+<script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+</script>
+<!-- //move top -->
+<!-- common jquery plugin -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- //common jquery plugin -->
+<!-- banner slider -->
+<script src="assets/js/owl.carousel.js"></script>
+<script>
+        $(document).ready(function () {
+            $('.owl-one').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        nav: false
+                    },
+                    667: {
+                        items: 1,
+                        nav: false
+                    },
+                    1000: {
+                        items: 1,
+                        nav: false
+                    }
+                }
+            })
+        })
+</script>
+<!-- //banner slider -->
+<!-- counter for stats -->
+<script src="assets/js/counter.js"></script>
+<!-- //counter for stats -->
+<!-- theme switch js (light and dark)-->
+<script src="assets/js/theme-change.js"></script>
+<script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.
+            autoType(".type-js", 200);
+        });
+</script>
+<!-- //theme switch js (light and dark)-->
+<!-- MENU-JS -->
+<script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+</script>
+<!-- //MENU-JS -->
+<!-- disable body scroll which navbar is in active -->
+<script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+</script>
+<!-- //disable body scroll which navbar is in active -->
+<!--bootstrap-->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- //bootstrap-->
+<!-- //Js scripts -->
+</body>
+</html>

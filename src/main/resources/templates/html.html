@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html vxmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/css/study1.css}"/>
+ <link rel="stylesheet" href="" th:href="@{/css/study1.css}"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        
+         <link rel="stylesheet" href="" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css}"/>
+         <link rel="stylesheet" href="" th:href="@{ https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js}"/>
+          <link rel="stylesheet" href="" th:href="@{ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js}"/>
+<style>
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color:yellow;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#no
+{
+  margin-left: 20px;
+}
+</style>
+<body th:style="'background:url(/image/examBackground.PNG)'"  background-size: cover;></body>
+</head>
+<body>
+<!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="/">Quiz App</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="/">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/studyboard">Back</a>
+	        </li>
+	       </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!-- Navbar End -->
+	<div class="container-fluid">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Q. What is HTML?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-xs-3 5"></div>
+					<div class="quiz" id="quiz" data-toggle="buttons">
+						<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="1"> HTML describes the structure of a webpage</label> <label
+							class="element-animation2 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="2">HTML is the standard markup language mainly used to create web pages</label> <label
+							class="element-animation3 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="3"> HTML consists of a set of elements that helps the browser how to view the content</label> <label
+							class="element-animation4 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="4"> All of the mentioned </label>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>All of the mentioned</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Who is the father of HTML?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1">Rasmus Lerdorf</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">Tim Berners-Lee</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">Brendan Eich</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4">  Sergey Brin</label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Tim Berners-Lee</p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. HTML stands for __________</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> HyperText Markup Language</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2"> HyperText Machine Language</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">HyperText Marking Language</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> none </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>HyperText Markup Language</p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container-fluid">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Q. What is the correct syntax of doctype in HTML5?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-xs-3 5"></div>
+					<div class="quiz" id="quiz" data-toggle="buttons">
+						<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="1">/doctype html</label> <label
+							class="element-animation2 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="2"> doctype html</label> <label
+							class="element-animation3 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="3">doctype html!</label> <label
+							class="element-animation4 btn btn-lg btn-danger btn-block"><span
+							class="btn-label"><i
+								class="glyphicon glyphicon-chevron-right"></i></span> <input
+							type="radio" name="q_answer" value="4"> !doctype html </label>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>!doctype html</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. Which of the following is used to read an HTML page and render it?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> Web server</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">Web network</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">Web browser</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> Web matrix </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Web browser</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q. What is DOM in HTML?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> Language dependent application programming</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">Hierarchy of objects in ASP.NET</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">Application programming interface</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4">Convention for representing and interacting with objects in html documents </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>Convention for representing and interacting with objects in html documents</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Q.  In which part of the HTML metadata is contained?</h3>
+					</div>
+					<div class="modal-body">
+						<div class="col-xs-3 5"></div>
+						<div class="quiz" id="quiz" data-toggle="buttons">
+							<label class="element-animation1 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="1"> head tag</label> <label
+								class="element-animation2 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="2">title tag</label> <label
+								class="element-animation3 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="3">html tag</label> <label
+								class="element-animation4 btn btn-lg btn-danger btn-block"><span
+								class="btn-label"><i
+									class="glyphicon glyphicon-chevron-right"></i></span> <input
+								type="radio" name="q_answer" value="4"> body tag </label>
+						</div>
+					</div>
+					<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>head tag</p>
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q.Which of the following is not the element associated with the HTML table layout?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> alignment</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">color</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3">size</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> spanning </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>color</p>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q.. Which element is used for or styling HTML5 layout?</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> CSS</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">jQuery</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3"> JavaScript</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> Colorful Style
+									Sheets </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>CSS</p>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Q.  HTML is a subset of ___________</h3>
+						</div>
+						<div class="modal-body">
+							<div class="col-xs-3 5"></div>
+							<div class="quiz" id="quiz" data-toggle="buttons">
+								<label
+									class="element-animation1 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="1"> SGMT</label> <label
+									class="element-animation2 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="2">SGML</label> <label
+									class="element-animation3 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="3"> SGME</label> <label
+									class="element-animation4 btn btn-lg btn-danger btn-block"><span
+									class="btn-label"><i
+										class="glyphicon glyphicon-chevron-right"></i></span> <input
+									type="radio" name="q_answer" value="4"> XHTM </label>
+							</div>
+						</div>
+						<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>SGML</p>
+					</div>
+				</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q.Which character is used to represent when a tag is closed in HTML?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1">  #</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">/</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">\</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> -</label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>/</p>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. In HTML, which attribute is used to create a link that opens in a new window tab?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1"> src=”_blank”</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">alt=”_blank”</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3"> target=”_self”</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4">  target=”_blank” </label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p> target=”_blank”</p>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="container-fluid">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Q. . Which of the following HTML tag is used to add a row in a table?</h3>
+							</div>
+							<div class="modal-body">
+								<div class="col-xs-3 5"></div>
+								<div class="quiz" id="quiz" data-toggle="buttons">
+									<label
+										class="element-animation1 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="1"> th</label> <label
+										class="element-animation2 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="2">tf</label> <label
+										class="element-animation3 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="3">th</label> <label
+										class="element-animation4 btn btn-lg btn-danger btn-block"><span
+										class="btn-label"><i
+											class="glyphicon glyphicon-chevron-right"></i></span> <input
+										type="radio" name="q_answer" value="4"> tr</label>
+								</div>
+							</div>
+							<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>tr</p>
+					</div>
+				</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Q. What is the work of address element in HTML5?</h3>
+								</div>
+								<div class="modal-body">
+									<div class="col-xs-3 5"></div>
+									<div class="quiz" id="quiz" data-toggle="buttons">
+										<label
+											class="element-animation1 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="1"> contains IP address</label> <label
+											class="element-animation2 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="2">contains home address</label> <label
+											class="element-animation3 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="3">contains url</label> <label
+											class="element-animation4 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="4"> contains contact details for author </label>
+									</div>
+								</div>
+								<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>contains contact details for author</p>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Q. What is the correct syntax of web address?</h3>
+								</div>
+								<div class="modal-body">
+									<div class="col-xs-3 5"></div>
+									<div class="quiz" id="quiz" data-toggle="buttons">
+										<label
+											class="element-animation1 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="1"> port://domain.filenmae:path/scheme/prefix</label> <label
+											class="element-animation2 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="2"> prefix://scheme.port:domain/filename/path</label> <label
+											class="element-animation3 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="3">path://prefix.port:domain/filename/scheme</label> <label
+											class="element-animation4 btn btn-lg btn-danger btn-block"><span
+											class="btn-label"><i
+												class="glyphicon glyphicon-chevron-right"></i></span> <input
+											type="radio" name="q_answer" value="4"> scheme://prefix.domain:port/path/filename </label>
+									</div>
+								</div>
+								<div class="dropdown">
+					<span id="no">Check Answer</span>
+					<div class="dropdown-content">
+						<p>scheme://prefix.domain:port/path/filename</p>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+
+</body>
+</html>
